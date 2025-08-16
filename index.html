@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윤지호 - 포트폴리오</title>
+    <!-- Tailwind CSS CDN을 사용하여 빠르고 쉽게 스타일링합니다. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN 링크 추가 -->
+    <script src="https://kit.fontawesome.com/b874717cb1.js" crossorigin="anonymous"></script>
+    <!-- Devicon CDN 링크 추가 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 구글 폰트 'Inter'를 사용하여 가독성을 높입니다. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- 슬라이드 1: 타이틀 페이지 -->
+    <div id="slide1" class="slide">
+        <div class="slide-content text-center">
+            <h1 class="text-6xl font-extrabold text-blue-400 mb-6 animate-fade-in">
+                열정과 끈기로 학습하는 개발자
+            </h1>
+            <p class="text-4xl text-gray-400">
+                윤지호
+            </p>
+        </div>
+    </div>
+
+    <!-- 슬라이드 2: 자기소개 -->
+    <div id="slide2" class="slide">
+        <div class="slide-content">
+            <h2 class="text-5xl font-bold mb-16 text-center">프로필</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-12">
+                <!-- Left Column: Text Info (user's layout preserved) -->
+                <div class="md:col-span-2">
+                    <div class="space-y-5 text-xl">
+                        <div class="grid grid-cols-4">
+                            <strong class="col-span-1 font-semibold text-blue-400">이름</strong>
+                            <p class="col-span-3">윤지호</p>
+                        </div>
+                        <div class="grid grid-cols-4">
+                            <strong class="col-span-1 font-semibold text-blue-400">연락처</strong>
+                            <div class="col-span-3">
+                                <div class="tooltip-container">
+                                    <span id="email-span" onclick="copyEmailToClipboard()" class="text-gray-300 hover:text-white hover:underline transition-colors flex items-center cursor-pointer">
+                                        <i class="fa-solid fa-envelope fa-fw mr-3"></i>zlhh3842@gmail.com
+                                    </span>
+                                    <span class="tooltip-text">이메일 복사</span>
+                                </div>
+                                <span id="copy-feedback" class="text-green-400 text-sm ml-2" style="display: none;">복사 완료!</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4">
+                            <strong class="col-span-1 font-semibold text-blue-400">GitHub</strong>
+                            <div class="col-span-3 flex items-center space-x-4">
+                                <a href="https://github.com/YoonJiho96" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white hover:underline transition-colors inline-flex items-center mt-2">
+                                    <i class="fa-brands fa-github mr-2"></i>GitHub[바로가기]
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4">
+                            <strong class="col-span-1 font-semibold text-blue-400">Blog</strong>
+                            <div class="col-span-3 flex items-center space-x-4">
+                                <a href="https://ohiz.notion.site/YJH-s-Notion-10bc497aa80e8067a93ce8f9ae0e5e7d" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white hover:underline transition-colors inline-flex items-center mt-2">
+                                    <i class="fa-brands fa-notion mr-2"></i>Notion[바로가기]
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Photo -->
+                <div class="md:col-span-1 flex flex-col items-center justify-center mt-12 md:mt-0">
+                     <div class="w-48 h-64 bg-gray-700 rounded-2xl mb-4 overflow-hidden">
+                          <img src="윤지호_증명사진.jpg" alt="프로필 사진" class="w-full h-full object-contain">
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 슬라이드 3: 학력 및 교육 이수 -->
+    <div id="slide3" class="slide">
+        <div class="slide-content">
+            <h2 class="text-5xl font-bold mb-16 text-center">학력 및 교육 이수</h2>
+            <div class="space-y-12">
+                <!-- 학력 섹션 -->
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-300 flex items-center mb-6">
+                        <i class="fa-solid fa-graduation-cap fa-fw mr-4"></i>
+                        학력 (Education)
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-[auto_1fr] gap-x-6">
+                            <p class="font-semibold text-gray-300">2015.03 - 2021.02</p>
+                            <div>
+                                <h4 class="text-xl font-bold">국립창원대학교</h4>
+                                <p class="text-lg text-gray-400">컴퓨터공학 전공 (3.9/4.5)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 교육 이수 섹션 -->
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-300 flex items-center mb-6">
+                        <i class="fa-solid fa-book fa-fw mr-4"></i>
+                        교육 이수 (Training)
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-[auto_1fr] gap-x-6">
+                            <p class="font-semibold text-gray-300">2024.01 - 2024.12</p>
+                            <div>
+                                <h4 class="text-xl font-bold">삼성 청년 SW 아카데미 11기 (1,600 시간)</h4>
+                                <p class="text-lg text-gray-400">삼성전자주식회사</p>
+                                <ul class="list-disc list-inside mt-2 text-gray-300">
+                                    <li>Certificate 등급 - 우수(상위 30%)</li>
+                                    <li>Java, SpringBoot, Vue, MySQL 등 풀스택 개발 역량 습득</li>
+                                    <li>심화 프로젝트 3회 진행 (2회 우수상 수상)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 4: 경력 -->
+    <div id="slide4" class="slide">
+        <div class="slide-content">
+            <h2 class="text-5xl font-bold mb-16 text-center">경력</h2>
+            <div class="space-y-12">
+                <!-- 경력 섹션 -->
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-300 flex items-center mb-6">
+                        <i class="fa-solid fa-briefcase fa-fw mr-4"></i>
+                        경력 (Experience)
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-[auto_1fr] gap-x-6">
+                            <p class="font-semibold text-gray-300">2022.01 - 2023.10</p>
+                            <div>
+                                <h4 class="text-xl font-bold">아라소프트</h4>
+                                <p class="text-lg text-gray-400">기술연구소 - 사원</p>
+                                <div class="mt-4 space-y-4">
+                                    <div>
+                                        <p class="font-semibold text-gray-200">[전자책 뷰어 PC 애플리케이션]</p>
+                                        <ul class="list-disc list-inside mt-1 text-gray-300 ml-4">
+                                            <li>C++, MFC 개발 유지보수</li>
+                                            <li>설치 파일 플랫폼 배포</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-200">[전자책 모바일 애플리케이션]</p>
+                                        <ul class="list-disc list-inside mt-1 text-gray-300 ml-4">
+                                            <li>Java, Android 개발 유지보수</li>
+                                            <li>구글 스토어 배포 관리</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-200">[전자책 웹 뷰어]</p>
+                                        <ul class="list-disc list-inside mt-1 text-gray-300 ml-4">
+                                            <li>GOLANG 백엔드 개발</li>
+                                            <li>React 프론트엔드 개발</li>
+                                            <li>배포 관리</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 5: 자격증 및 수상 내역 -->
+    <div id="slide5" class="slide">
+        <div class="slide-content">
+            <h2 class="text-5xl font-bold mb-16 text-center">자격증 및 수상 내역</h2>
+            <div class="space-y-12">
+                
+                <!-- 자격증 섹션 -->
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-300 flex items-center mb-6">
+                        <i class="fa-solid fa-certificate fa-fw mr-4"></i>
+                        자격증 (Certifications)
+                    </h3>
+                    <div class="grid grid-cols-[auto_1fr] gap-x-8 gap-y-4 items-start">
+                        <!-- 항목 1 -->
+                        <p class="font-semibold text-gray-300">2025.04.04</p>
+                        <div>
+                            <h4 class="text-xl font-bold">SQLD</h4>
+                            <p class="text-lg text-gray-400">한국데이터진흥원</p>
+                        </div>
+                        <!-- 항목 2 -->
+                        <p class="font-semibold text-gray-300">2024.12.11</p>
+                        <div>
+                            <h4 class="text-xl font-bold">정보처리기사</h4>
+                            <p class="text-lg text-gray-400">한국산업인력공단</p>
+                        </div>
+                        <!-- 항목 3 -->
+                        <p class="font-semibold text-gray-300">2024.09.07</p>
+                        <div>
+                            <h4 class="text-xl font-bold">TOEIC Speaking Test - IH(150)</h4>
+                            <p class="text-lg text-gray-400">ETS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 수상 내역 섹션 -->
+                <div>
+                    <h3 class="text-3xl font-bold text-blue-300 flex items-center mb-6">
+                        <i class="fa-solid fa-trophy fa-fw mr-4"></i>
+                        수상 내역 (Awards)
+                    </h3>
+                    <div class="grid grid-cols-[auto_1fr] gap-x-8 gap-y-4 items-start">
+                        <p class="font-semibold text-gray-300">2024.11.29</p>
+                        <div>
+                            <h4 class="text-xl font-bold">SSAFY 자율 프로젝트 우수상</h4>
+                            <p class="text-lg text-gray-400">삼성전자주식회사</p>
+                        </div>
+                        <p class="font-semibold text-gray-300">2024.10.11</p>
+                        <div>
+                            <h4 class="text-xl font-bold">SSAFY 특화 프로젝트 우수상</h4>
+                            <p class="text-lg text-gray-400">삼성전자주식회사</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- 슬라이드 6: 기술 스택 -->
+    <div id="slide6" class="slide">
+        <div class="slide-content">
+            <h2 class="text-5xl font-bold mb-16 text-center">기술 스택</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <!-- Language Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-code fa-fw mr-3"></i>
+                        Language
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-java-plain colored text-xl mr-2"></i>Java</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-python-plain colored text-xl mr-2"></i>Python</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-csharp-plain colored text-xl mr-2"></i>C#</span>
+                    </div>
+                </div>
+
+                <!-- Framework Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-layer-group fa-fw mr-3"></i>
+                        Framework
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-spring-plain colored text-xl mr-2"></i>Spring</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-vuejs-plain colored text-xl mr-2"></i>Vue.js</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-react-original colored text-xl mr-2"></i>React</span>
+                    </div>
+                </div>
+
+                <!-- Database Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-database fa-fw mr-3"></i>
+                        Database
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-mysql-plain colored text-xl mr-2"></i>MySQL</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-postgresql-plain colored text-xl mr-2"></i>PostgreSQL</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-redis-plain colored text-xl mr-2"></i>Redis</span>
+                    </div>
+                </div>
+
+                <!-- Cloud/Server Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-server fa-fw mr-3"></i>
+                        Cloud/Server
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-amazonwebservices-original colored text-xl mr-2"></i>AWS</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full">EC2</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full">S3</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-docker-plain colored text-xl mr-2"></i>Docker</span>
+                    </div>
+                </div>
+                
+                <!-- Version Control Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-code-branch fa-fw mr-3"></i>
+                        Version Control
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-git-plain colored text-xl mr-2"></i>Git</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-github-original colored text-xl mr-2"></i>GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Test/CI/CD Card -->
+                <div class="bg-slate-600/30 backdrop-blur-lg border border-slate-500/50 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-bold flex items-center mb-4 text-blue-300">
+                        <i class="fa-solid fa-check-double fa-fw mr-3"></i>
+                        Test/CI/CD
+                    </h3>
+                    <div class="flex flex-wrap gap-x-4 gap-y-3">
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-jenkins-plain colored text-xl mr-2"></i>Jenkins</span>
+                        <span class="inline-flex items-center bg-white/10 text-slate-100 text-base font-medium pl-3 pr-4 py-2 rounded-full"><i class="devicon-github-original colored text-xl mr-2"></i>GitHub Actions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 7: 프로젝트 (게임 런처) -->
+    <div id="slide7" class="slide">
+        <div class="slide-content">
+            <h2 class="text-4xl font-bold mb-12">[프로젝트 1]</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-3xl font-bold text-blue-400">Land Of Rex</h3>
+                    <p class="text-lg text-gray-300 mt-2">Desktop Application</p>
+                    <p class="text-md text-gray-400 mt-1">2024. 10. - 2024. 11.</p>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold">1인 유닛 건설 디펜스 게임</h3>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Description.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                            Electron 기반의 데스크탑 게임 런처를 개발하고, AWS S3와 연동하여 게임 설치 및 자동 업데이트 기능을 구현했습니다.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">What did I do.</h4>
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
+                            <li>Electron 기반 런처 구현 및 AWS S3 연동 게임 설치 기능 개발</li>
+                            <li>서버/로컬 manifest 비교 및 파일 해시 검사로 변경된 파일만 업데이트</li>
+                            <li>GitHub Release 연동 런처 자동 업데이트 기능 구현</li>
+                            <li>NSIS를 활용해 Windows 설치 파일 생성 및 배포</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Tech Stack.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                            Electron, AWS S3, Node.js, GitHub, NSIS
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">GitHub Repository.</h4>
+                        <a href="https://github.com/YoonJiho96/Land-Of-Rex" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white hover:underline transition-colors inline-flex items-center mt-2">
+                            <i class="fa-brands fa-github mr-2"></i> https://github.com/YoonJiho96/Land-Of-Rex
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- 슬라이드 8: 프로젝트 (게임 서버) -->
+    <div id="slide8" class="slide">
+        <div class="slide-content">
+            <h2 class="text-4xl font-bold mb-12">[프로젝트 2]</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-3xl font-bold text-blue-400">In My Sleep.</h3>
+                    <p class="text-lg text-gray-300 mt-2">인프라 구축<br>Backend & DevOps</p>
+                    <p class="text-md text-gray-400 mt-1">2024. 08. - 2024. 10.</p>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold">2인 협력 멀티플레이 게임</h3>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Description.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                            AWS EC2 환경에 Jenkins, Docker 기반의 CI/CD 파이프라인을 구축하고, Spring 기반의 실시간 멀티플레이 게임 서버의 핵심 기능을 개발했습니다.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">What did I do.</h4>
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
+                            <li>AWS EC2 환경에 Jenkins, Docker 기반 CI/CD 파이프라인 등 인프라 구축 및 운영</li>
+                            <li>Spring Security, Redis, Photon을 활용한 계정/인증 API 및 실시간 친구 시스템 개발</li>
+                            <li>사용자 게임 데이터 저장 API 개발 및 트랜잭션 관리</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Tech Stack.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                            AWS EC2, Jenkins, Docker, Docker-compose, Java, Spring, Spring Security, JPA, Redis, MySQL
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">GitHub Repository.</h4>
+                        <a href="https://github.com/YoonJiho96/InMySleep" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white hover:underline transition-colors inline-flex items-center mt-2">
+                            <i class="fa-brands fa-github mr-2"></i> https://github.com/YoonJiho96/InMySleep
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 슬라이드 9: 프로젝트 (러닝 기록 PWA) -->
+    <div id="slide9" class="slide">
+        <div class="slide-content">
+            <h2 class="text-4xl font-bold mb-12">[프로젝트 3]</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <h3 class="text-3xl font-bold text-blue-400">Run US.</h3>
+                    <p class="text-lg text-gray-300 mt-2">인프라 구축<br>Backend & Frontend</p>
+                    <p class="text-md text-gray-400 mt-1">2024. 07. - 2024. 08.</p>
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-3xl font-bold">그룹 러닝 측정 서비스.</h3>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Description.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                           백엔드 코드를 리팩터링하고 PWA로 전환하여 사용자 경험을 개선했습니다. 인프라 구축부터 백엔드, 프론트엔드 개발 전반에 참여했습니다.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">What did I do.</h4>
+                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
+                            <li>AWS EC2, Docker, Jenkins를 활용한 인프라 설계 및 CI/CD 파이프라인 구축</li>
+                            <li>백엔드 코드 리팩터링, JPA 쿼리 최적화, 전역 예외 처리 도입 등 백엔드 성능 및 구조 개선</li>
+                            <li>Spring Security로 API 보안을 강화</li>
+                            <li>React+Vite 기반 웹을 PWA로 변환하여 모바일 경험 제공</li>
+                        </ul>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">Tech Stack.</h4>
+                        <p class="mt-2 text-gray-300 leading-relaxed">
+                            AWS EC2, Jenkins, Docker, Docker-compose, Java, Spring, Spring Security, JPA, MySQL, React, Vite
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold text-blue-300">GitHub Repository.</h4>
+                        <a href="https://github.com/GOOTEAKIM/RunUs" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white hover:underline transition-colors inline-flex items-center mt-2">
+                            <i class="fa-brands fa-github mr-2"></i> https://github.com/GOOTEAKIM/RunUs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Tailwind CSS 초기화 및 기본 스타일 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* 어두운 배경색 */
+    color: #e2e8f0; /* 밝은 텍스트색 */
+}
+.slide {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.slide-content {
+    max-width: 800px;
+    text-align: left;
+    width: 100%;
+}
+
+/* 슬라이드 순서에 따라 배경색 자동 변경 */
+.slide:nth-child(odd) {
+    background-color: #1a202c; /* bg-gray-900 */
+}
+.slide:nth-child(even) {
+    background-color: #2d3748; /* bg-gray-800 */
+}
+
+/* 드래그 선택 영역 스타일 */
+::selection {
+    background-color: #4f46e5; /* Teal-500 */
+    color: #ffffff;
+}
+::-moz-selection { /* Firefox 브라우저 호환용 */
+    background-color: #4f46e5; /* Teal-500 */
+    color: #ffffff;
+}
+
+/* PDF 출력용 스타일 */
+@media print {
+    @page {
+        size: A4 landscape; /* 가로 방향으로 설정 */
+        margin: 0; /* 페이지 여백 제거 */
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact; /* 배경색 및 색상 강제 인쇄 (Chrome, Safari) */
+        print-color-adjust: exact; /* 표준 속성 */
+    }
+
+    .slide {
+        height: 100vh; /* 각 슬라이드가 뷰포트 높이를 꽉 채우도록 */
+        page-break-after: always; /* 각 슬라이드 후 페이지 나누기 */
+        box-sizing: border-box;
+    }
+    
+    .slide:last-of-type {
+        page-break-after: auto; /* 마지막 슬라이드 뒤에는 페이지 나누지 않음 */
+    }
+}
+
+/* 툴팁 스타일 */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 100px;
+    background-color: #2d3748; /* bg-gray-800 */
+    color: #e2e8f0; /* text-gray-200 */
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px; /* 글자 크기 조정 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
