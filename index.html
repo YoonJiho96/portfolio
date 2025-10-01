@@ -24,7 +24,7 @@
             <h1 class="text-6xl font-extrabold text-blue-400 mb-6 animate-fade-in">
                 열정과 끈기로 학습하는 개발자
             </h1>
-            <p class="text-4xl text-gray-400">
+            <p class="text-4xl text-white-400">
                 윤지호
             </p>
         </div>
@@ -328,7 +328,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="md:col-span-1">
                     <h3 class="text-3xl font-bold text-blue-400">Land Of Rex</h3>
-                    <p class="text-lg text-gray-300 mt-2">Desktop Application</p>
+                    <p class="text-lg text-gray-300 mt-2">게임 런처<br>Desktop Application</p>
                     <p class="text-md text-gray-400 mt-1">2024. 10. - 2024. 11.</p>
                 </div>
                 <div class="md:col-span-2">
@@ -336,23 +336,58 @@
                     <div class="mt-8">
                         <h4 class="text-xl font-bold text-blue-300">Description.</h4>
                         <p class="mt-2 text-gray-300 leading-relaxed">
-                            Electron 기반의 데스크탑 게임 런처를 개발하고, AWS S3와 연동하여 게임 설치 및 자동 업데이트 기능을 구현했습니다.
+                            대용량의 게임 클라이언트를 어떻게 하면 효율적으로 배포하고 업데이트할 수 있을지에 대한 고민에서 시작된 프로젝트입니다.<br>Electron으로 데스크탑 런처를 개발하고, AWS S3와 연동하여 안정적인 게임 설치 및 자동 업데이트 기능을 구현했습니다.
                         </p>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-xl font-bold text-blue-300">What did I do.</h4>
-                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
-                            <li>Electron 기반 런처 구현 및 AWS S3 연동 게임 설치 기능 개발</li>
-                            <li>서버/로컬 manifest 비교 및 파일 해시 검사로 변경된 파일만 업데이트</li>
-                            <li>GitHub Release 연동 런처 자동 업데이트 기능 구현</li>
-                            <li>NSIS를 활용해 Windows 설치 파일 생성 및 배포</li>
-                        </ul>
+                        <h4 class="text-xl font-bold text-blue-300 mb-4">What did I do.</h4>
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">매니페스트 기반 무결성 검사 및 패치 시스템 개발</h5>
+                                    <p class="text-gray-400">Node.js 스크립트로 게임 파일의 해시(MD5) 목록인 매니페스트를 생성하고, 서버와 로컬 매니페스트를 비교하여 변경된 파일만 다운로드하는 시스템을 구축</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">Electron 기반 런처 자동 업데이트 기능 구현</h5>
+                                    <p class="text-gray-400">electron-updater와 GitHub Release를 연동, 새로운 런처 버전 배포 시 사용자가 런처를 켜면 자동으로 업데이트를 감지하고 설치하는 기능 구현</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">AWS S3를 활용한 안정적인 게임 파일 배포</h5>
+                                    <p class="text-gray-400">게임 클라이언트와 매니페스트 파일을 AWS S3에 업로드하고, 런처에서 AWS-SDK를 통해 안정적으로 파일을 다운로드하는 시스템 구축</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">NSIS를 활용한 Windows 설치 프로그램 제작</h5>
+                                    <p class="text-gray-400">electron-builder와 NSIS를 이용하여 사용자 편의성을 고려한 설치 파일 생성 및 배포</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-xl font-bold text-blue-300">Tech Stack.</h4>
-                        <p class="mt-2 text-gray-300 leading-relaxed">
-                            Electron, AWS S3, Node.js, GitHub, NSIS
-                        </p>
+                        <h4 class="text-xl font-bold text-blue-300 mb-4">Tech Stack.</h4>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Application</strong>
+                                <p class="col-span-3 text-gray-300">Electron, Node.js, JavaScript (ES6+)</p>
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Infra & Deploy</strong>
+                                <p class="col-span-3 text-gray-300">AWS S3, GitHub Actions, NSIS</p>
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Libraries</strong>
+                                <p class="col-span-3 text-gray-300">electron-updater, aws-sdk</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8">
                         <h4 class="text-xl font-bold text-blue-300">GitHub Repository.</h4>
