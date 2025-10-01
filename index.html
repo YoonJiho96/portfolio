@@ -384,18 +384,65 @@
                         </p>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-xl font-bold text-blue-300">What did I do.</h4>
-                        <ul class="list-disc list-inside mt-2 text-gray-300 space-y-2">
-                            <li>AWS EC2 환경에 Jenkins, Docker 기반 CI/CD 파이프라인 등 인프라 구축 및 운영</li>
-                            <li>Spring Security, Redis, Photon을 활용한 계정/인증 API 및 실시간 친구 시스템 개발</li>
-                            <li>사용자 게임 데이터 저장 API 개발 및 트랜잭션 관리</li>
-                        </ul>
+                        <h4 class="text-xl font-bold text-blue-300 mb-4">What did I do.</h4>
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">JWT & Spring Security 기반 인증/인가 시스템 구축</h5>
+                                    <p class="text-gray-400">Access/Refresh Token을 활용한 API 접근 제어 및 보안 강화</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">Redis 활용 실시간 친구 기능 개발</h5>
+                                    <p class="text-gray-400">실시간 친구 요청, 수락, 삭제 기능 구현</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">QueryDSL을 활용한 게임 랭킹 조회 성능 최적화</h5>
+                                    <p class="text-gray-400">복잡한 검색 조건의 랭킹 API에서 `fetchJoin`으로 N+1 문제를 해결하고, 동적 쿼리를 적용하여 데이터베이스 조회 성능을 개선</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">이메일 인증 서비스 구현</h5>
+                                    <p class="text-gray-400">SMTP를 이용한 회원가입 인증 및 비밀번호 찾기 기능 구현</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="flex-shrink-0"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i></div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-100">CI/CD 파이프라인 구축</h5>
+                                    <p class="text-gray-400">AWS EC2, Jenkins, Docker를 연동한 자동 빌드/배포 환경 구축 및 운영</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-xl font-bold text-blue-300">Tech Stack.</h4>
-                        <p class="mt-2 text-gray-300 leading-relaxed">
-                            AWS EC2, Jenkins, Docker, Docker-compose, Java, Spring, Spring Security, JPA, Redis, MySQL
-                        </p>
+                        <h4 class="text-xl font-bold text-blue-300 mb-4">Tech Stack.</h4>
+                        <div class="space-y-3">
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Backend</strong>
+                                <p class="col-span-3 text-gray-300">Java 17, Spring Boot, Spring Security, JPA, QueryDSL, JWT</p>
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Database & Cache</strong>
+                                <p class="col-span-3 text-gray-300">MySQL, Redis</p>
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Infra & DevOps</strong>
+                                <p class="col-span-3 text-gray-300">AWS EC2, Docker, Docker-compose, Jenkins</p>
+                            </div>
+                            <div class="grid grid-cols-4">
+                                <strong class="col-span-1 font-semibold text-gray-100">Tools</strong>
+                                <p class="col-span-3 text-gray-300">Swagger (API 문서 자동화)</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="mt-8">
                         <h4 class="text-xl font-bold text-blue-300">GitHub Repository.</h4>
